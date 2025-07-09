@@ -1,5 +1,6 @@
 // Liste des sites de recherche
 const sites = [
+    { name: "Auto", url:"", icon:""},
     { name: "Google", url: "https://www.google.com/search?q=", icon: "https://www.google.com/favicon.ico" },
     { name: "Bing", url: "https://www.bing.com/search?q=", icon: "https://www.bing.com/favicon.ico" },
     { name: "DuckDuckGo", url: "https://duckduckgo.com/?q=", icon: "https://duckduckgo.com/favicon.ico" },
@@ -71,6 +72,19 @@ function populateSiteSelect() {
     const selectedSites = getSelectedSitesFromCookie();
     const siteSelect = document.getElementById('siteSelect');
 
+    // Créer l'option "auto" si elle n'existe pas déjà
+    const autoOption = Array.from(siteSelect.options).find(option => option.value === 'auto');
+    if (!autoOption) {
+        const option = document.createElement('option');
+        option.value = 'auto';
+        option.textContent = 'auto';
+        siteSelect.appendChild(option);
+    }
+
+    // Sélectionner l'option "auto" par défaut
+    siteSelect.value = 'auto';
+
+    // Ajouter les autres sites
     selectedSites.forEach(siteName => {
         const existingOption = Array.from(siteSelect.options).find(option => option.value === siteName);
         if (!existingOption) {
