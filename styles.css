@@ -1,0 +1,98 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9ecef;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    color: #343a40;
+    text-align: center;
+}
+h2 {
+    color: #495057;
+    margin-top: 20px;
+}
+#searchContainer {
+    display: flex;
+    gap: 1em;
+    align-items: stretch;
+}
+#query {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    flex: auto;
+    transition: border-color 0.3s;
+}
+#query:focus {
+    border-color: #007bff;
+    outline: none;
+}
+#siteSelect {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: #afd6ff;
+}
+#searchButton {
+    background-color: #afd6ff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: min-content;
+    transition: background-color 0.3s;
+}
+#searchButton:hover {
+    background-color: #53a7ff;
+}
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.toggle-button {
+    background-color: #f8f9fa;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 5px;
+    flex: 1 1 calc(30% - 10px);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.toggle-button img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+.toggle-button:hover {
+    background-color: #e2e6ea;
+}
+@media (max-width: 600px) {
+    .toggle-button {
+        flex: 1 1 100%;
+    }
+}
+.toggle {
+    background-color: #afd6ff;
+}
+.toggle:hover {
+    background-color: #53a7ff;
+}
+#siteSearch {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    margin: 1em;
+}

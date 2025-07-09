@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <title>Gestion des Sites de Recherche</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1>Recherche sur plusieurs sites</h1>
+    <div id="searchContainer">
+    	<input type="text" id="query" placeholder="Entrez votre recherche...">
+    	<select id="siteSelect">
+       		<option value="">Sélectionnez un site</option>
+   	</select>
+    <button id="searchButton">Rechercher</button>
+   </div>
+    <h2>Gérer les sites de recherche</h2>
+    
+    <!-- Barre de recherche pour les sites -->
+    <input type="text" id="siteSearch" placeholder="Rechercher un site...">
+    
+    <div class="button-container" id="buttonContainer">
+        <!-- Les boutons seront générés ici par JavaScript -->
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
